@@ -1,134 +1,249 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin          : 0;
+  padding         : 0;
+  box-sizing      : border-box;
+  background-color: #000;
 }
 
 html,
-body{
-  width: 100%;
-  height: 100%;
+body {
+  width      : 100%;
+  height     : 100%;
   font-family: "Mabry Pro";
-  background-color: #000;
-  color: #fff;
+  color      : #fff;
 }
 
 img {
-  width: 100%;
-  height:100%;
+  width     : 100%;
+  height    : 100%;
   object-fit: cover;
 }
 
-section {
-  position: relative;
-  width: 100vw;
-  display: flex;
-  justify-content:center;
-  align-items: center;
-  margin: auto;
-}
+nav {
+  position       : fixed;
+  top            : 0;
+  left           : 0;
+  width          : 100vw;
+  padding        : 1.75em;
+  display        : flex;
+  justify-content: space-between;
+  align-items    : center;
 
-.hero{
-  height: 100vh;
-}
+  .links {
+    display: flex;
+    gap    : 2em;
+  }
 
-.hero .img{
-  width: 50%;
-  aspect-ratio: 1;
-}
-
-.footer{
-  height: 50vh;
-  align-items: flex-start;
-}
-
-.footer a{
-  font-size: 4vw;
-  color: #fff;
-}
-
-.main {
-  width: 100vh;
-  height:150vh;
-  flex-direction: column;
-}
-
-.row{
-  position: relative;
-  width: 100vw;
-  margin: 1em 0;
-  display: flex;
-  justify-content: center;
-  gap: 2em;
-}
-
-.card{
-  position: relative;
-  width: 40%;
-  height: 360px;
-  border-radius:0.75em;
-  overflow: hidden;
-  will-change: transform;
-}
-
-.main-content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform:translate(-50%, -50%);
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.logo{
-  width: 150px;
-  height: 150px;
-  border: 2px solid #fff;
-  border-radius:100%;
-  overflow: hidden;
-  transform: scale(0);
-}
-
-.copy {
-  margin: 2em 0;
-  display: flex;
-  flex-direction:colum;
-  justify-content: center;
-  align-items: center;
-}
-
-.line{
-  position: relative;
-  margin: 0.5em 0;
-  width: max-content;
-  height: 28px;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-
-.line p{
-  position: relative;
-  font-size: 24px;
-  transform: translateY(30px);
-}
-
-button {
-  position: relative;
-  padding: 1em 2em;
-  font-size: 18px;
-  color: #fff;
-  border: 2px solid #fff;
-  border-radius: 8em;
-  background: none;
-  outline: none;
-  transform: translateY(30px);
-  opacity: 0;
-}
-
-@media(max-width:900px) {
-  .card{
-    width:50%;
-    height:240px;
+  a {
+    text-decoration: none;
+    text-transform : uppercase;
+    color          : #fff;
+    font-family    : "Akkurat Mono";
+    font-size      : 12px;
+    font-weight    : 600;
+    padding        : 0.5em;
   }
 }
 
+.transitions-home {
+  width           : 100vw;
+  height          : 100svh;
+  background-color: #fff;
+  display         : flex;
+  justify-content : center;
+  align-items     : center;
+  text-align      : center;
+
+  h1 {
+    width         : 100%;
+    position      : absolute;
+    top           : 50%;
+    left          : 50%;
+    transform     : translate(-50%, -50%);
+    text-transform: uppercase;
+    color         : #fff;
+    font-size     : 20vw;
+    font-weight   : bolder;
+    letter-spacing: -0.5rem;
+    line-height   : 1;
+    clip-path     : polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  h1 .chan {
+    position   : relative;
+    will-change: transform;
+  }
+}
+
+.project {
+  width           : 100vw;
+  height          : 100%;
+  min-height      : 100svh;
+  background-color: #000;
+  padding         : 20em 1em;
+
+  .images {
+    width         : 30%;
+    margin        : 0 auto;
+    display       : flex;
+    flex-direction: colum;
+    gap           : 2em;
+  }
+}
+
+.info {
+  width           : 100vw;
+  height          : 100%;
+  min-height      : 100svh;
+  background-color: #000;
+  display         : flex;
+
+  .col {
+    flex: 1;
+  }
+
+  .col:nth-child(2) {
+    padding        : 2em;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+  }
+
+  .col p {
+    font-weight: 500;
+    font-size  : 2rem;
+    color      : #fff;
+  }
+
+  .col p line {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .col p line span {
+    position   : relative;
+    will-change: transform;
+  }
+}
+
+
+
+
+
+
+/*scroll-trigger*/
+.tpl-scroll-trigger {
+  color: #fff;
+
+  section {
+    position       : relative;
+    width          : 100vw;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    margin         : auto;
+  }
+
+  .hero {
+    height: 100vh;
+  }
+
+  .hero .img {
+    width       : 50%;
+    aspect-ratio: 1;
+  }
+
+  .footer {
+    height     : 50vh;
+    align-items: flex-start;
+  }
+
+  .footer a {
+    font-size: 4vw;
+    color    : #fff;
+  }
+
+  .main {
+    width         : 100vh;
+    height        : 150vh;
+    flex-direction: column;
+  }
+
+  .row {
+    position       : relative;
+    width          : 100vw;
+    margin         : 1em 0;
+    display        : flex;
+    justify-content: center;
+    gap            : 2em;
+  }
+
+  .card {
+    position     : relative;
+    width        : 40%;
+    height       : 360px;
+    border-radius: 0.75em;
+    overflow     : hidden;
+    will-change  : transform;
+  }
+
+  .main-content {
+    position      : absolute;
+    top           : 50%;
+    left          : 50%;
+    transform     : translate(-50%, -50%);
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+  }
+
+  .logo {
+    width        : 150px;
+    height       : 150px;
+    border       : 2px solid #fff;
+    border-radius: 100%;
+    overflow     : hidden;
+    transform    : scale(0);
+  }
+
+  .copy {
+    margin         : 2em 0;
+    display        : flex;
+    flex-direction : colum;
+    justify-content: center;
+    align-items    : center;
+  }
+
+  .line {
+    position : relative;
+    margin   : 0.5em 0;
+    width    : max-content;
+    height   : 28px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .line p {
+    position : relative;
+    font-size: 24px;
+    transform: translateY(30px);
+  }
+
+  button {
+    position     : relative;
+    padding      : 1em 2em;
+    font-size    : 18px;
+    color        : #fff;
+    border       : 2px solid #fff;
+    border-radius: 8em;
+    background   : none;
+    outline      : none;
+    transform    : translateY(30px);
+    opacity      : 0;
+  }
+
+  @media(max-width:900px) {
+    .card {
+      width : 50%;
+      height: 240px;
+    }
+  }
+}

@@ -111,7 +111,7 @@ export default function Home() {
   }
   
   return (
-    <>
+    <div className="tpl-scroll-trigger">
       <ReactLenis root>
         <section className="hero">
           <div className="img">
@@ -145,6 +145,6 @@ export default function Home() {
           </div>
         </section>
       </ReactLenis>
-    </>
+    </div>
   );
 }
