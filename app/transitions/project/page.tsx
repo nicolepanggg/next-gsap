@@ -1,8 +1,14 @@
-import Nav from "../components/nav";
+import { CreateMetadata } from '../components/createMetadata';
+
+export const metadata = CreateMetadata({
+  title: 'Project',
+  description: 'Welcome to the Project page.',
+  keywords: 'GSAP, Home Page, Transitions, Project, Information',
+});
+
 const Projrcts = () => {
     return (
         <>
-            <Nav />
             <div className="project">
                 <div className="images">
                     <img src="/img-1.jpg" alt="" />

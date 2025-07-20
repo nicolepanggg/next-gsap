@@ -6,7 +6,7 @@ const Nav = () => {
     <nav className="nav">
         <div className="logo">
             <div className="link">
-                <Link href={"/transitions"}>Index</Link>
+                <Link href={"/transitions"}>Home</Link>
             </div>
         </div>
         <div className="links">

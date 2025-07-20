@@ -48,7 +48,6 @@ nav {
 .transitions-home {
   width           : 100vw;
   height          : 100svh;
-  background-color: #fff;
   display         : flex;
   justify-content : center;
   align-items     : center;
@@ -79,14 +78,13 @@ nav {
   width           : 100vw;
   height          : 100%;
   min-height      : 100svh;
-  background-color: #000;
   padding         : 20em 1em;
 
   .images {
     width         : 30%;
     margin        : 0 auto;
     display       : flex;
-    flex-direction: colum;
+    flex-direction: column;
     gap           : 2em;
   }
 }
@@ -95,7 +93,6 @@ nav {
   width           : 100vw;
   height          : 100%;
   min-height      : 100svh;
-  background-color: #000;
   display         : flex;
 
   .col {
@@ -115,17 +112,15 @@ nav {
     color      : #fff;
   }
 
-  .col p line {
+  .col p .line {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
-  .col p line span {
+  .col p .line span {
     position   : relative;
     will-change: transform;
   }
 }
-
-
 
 
 
