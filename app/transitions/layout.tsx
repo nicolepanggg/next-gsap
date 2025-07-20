@@ -1,11 +1,17 @@
+'use client';
 import Nav from "./components/nav";
+import { ViewTransitions } from 'next-view-transitions';
 
 export default function TransitionsLayout({ children }: { children: React.ReactNode }) {
     return (
-    <div id="transitions">
-        <Nav/>
-        <main>{children}</main>
-    </div>
+        <ViewTransitions>
+            <div id="transitions">
+                <Nav />
+                <main>{children}</main>
+            </div>
+        </ViewTransitions>
     );
 
-}1
+
+}
+
