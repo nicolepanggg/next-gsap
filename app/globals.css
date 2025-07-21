@@ -13,25 +13,35 @@ body {
   color      : #fff;
 }
 
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 300ms;
-}
-
 img {
   width     : 100%;
   height    : 100%;
   object-fit: cover;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none !important;
+}
+
+::view-transition-group(root) {
+  z-index: auto !important;
+}
+
+::view-transition-image-pair(root) {
+  isolation  : isolate;
+  will-change: transform, opacity, clip-path;
+  z-index    : 1;
+}
+
+::view-transition-new(root) {
+  z-index  : 10000;
+  animation: none !important;
+}
+
+::view-transition-old(root) {
+  z-index  : 1;
+  animation: none !important;
 }
 
 nav {
@@ -58,15 +68,19 @@ nav {
     font-weight    : 600;
     padding        : 0.5em;
   }
+
+  >div {
+    cursor: pointer;
+  }
 }
 
 .transitions-home {
-  width           : 100vw;
-  height          : 100svh;
-  display         : flex;
-  justify-content : center;
-  align-items     : center;
-  text-align      : center;
+  width          : 100vw;
+  height         : 100svh;
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  text-align     : center;
 
   h1 {
     width         : 100%;
@@ -90,10 +104,10 @@ nav {
 }
 
 .project {
-  width           : 100vw;
-  height          : 100%;
-  min-height      : 100svh;
-  padding         : 20em 1em;
+  width     : 100vw;
+  height    : 100%;
+  min-height: 100svh;
+  padding   : 20em 1em;
 
   .images {
     width         : 30%;
@@ -105,10 +119,10 @@ nav {
 }
 
 .info {
-  width           : 100vw;
-  height          : 100%;
-  min-height      : 100svh;
-  display         : flex;
+  width     : 100vw;
+  height    : 100%;
+  min-height: 100svh;
+  display   : flex;
 
   .col {
     flex: 1;
@@ -136,7 +150,6 @@ nav {
     will-change: transform;
   }
 }
-
 
 
 

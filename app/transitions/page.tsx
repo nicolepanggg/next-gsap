@@ -1,6 +1,6 @@
-
-import Nav from "./components/nav";
+import ReactLenis from "lenis/react";
 import { CreateMetadata } from './components/createMetadata';
+import Transitions from './components/HomeTransitions';
 
 export const metadata = CreateMetadata({
     title: 'Home Page',
@@ -8,13 +8,6 @@ export const metadata = CreateMetadata({
     keywords: 'GSAP, Home Page, Transitions, Project, Information',
 });
 
-export default function transitions() {
-    return (
-        <>
-            <Nav />
-            <div className="transitions-home">
-
-                <h1>Coffee</h1>
-            </div>
-        </>);
+export default function Page() {
+    return <Transitions />;
 }

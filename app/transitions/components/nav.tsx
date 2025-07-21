@@ -1,7 +1,5 @@
 "use client";
 import { useTransitionRouter } from "next-view-transitions";
-import Link from "next/link"
-
 
 const Nav = () => {
     const router = useTransitionRouter();
@@ -41,9 +39,6 @@ const Nav = () => {
                 pseudoElement: "::view-transition-new(root)",
             }
         )
-
-    
-
     }
 
     return (
