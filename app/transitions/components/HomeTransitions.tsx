@@ -2,6 +2,7 @@
 import ReactLenis from "lenis/react";
 
 import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
 import SplitType from "split-type";
 import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
@@ -11,7 +12,7 @@ export default function Transitions() {
     const pathname = usePathname();
 
     
-    useEffect(() => {
+    useGSAP(() => {
         const coffeeText = new SplitType(el.current!, { types: "chars" });
         const animation = gsap.from(coffeeText.chars, {
             opacity: 0,

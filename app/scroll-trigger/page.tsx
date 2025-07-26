@@ -2,13 +2,14 @@
 import { useEffect } from "react";
 import Link from "next/link";
 import gsap from "gsap";
+import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ReactLenis } from "lenis/react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  useEffect(()=>{
+  useGSAP(()=>{
     const ScrollTriggerSetting ={
       trigger:".main",
       start:"top 25%",
